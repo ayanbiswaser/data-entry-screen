@@ -3,7 +3,7 @@ components:
   - components:
     - layout_properties: {width: 47}
       name: heading_logo
-      properties: {height: 46}
+      properties: {height: 46, visible: true}
       type: Image
     - layout_properties: {}
       name: heading_label
@@ -24,7 +24,7 @@ components:
       type: Spacer
     - layout_properties: {width: 346}
       name: orgid_dropdown
-      properties: {include_placeholder: true, placeholder: Select Organization ID}
+      properties: {include_placeholder: true, placeholder: Select Organization ID, visible: true}
       type: DropDown
     layout_properties: {grid_position: 'KYSEXE,VBJKTR'}
     name: orgid_flow_panel

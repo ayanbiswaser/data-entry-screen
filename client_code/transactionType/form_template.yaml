@@ -1,9 +1,77 @@
 components:
 - components:
-  - layout_properties: {grid_position: 'MKGQXC,YXZAII'}
-    name: label_1
-    properties: {text: Transaction type}
-    type: Label
+  - components:
+    - name: label_1
+      properties: {align: left, bold: true, font_size: 24, text: 'Transaction Type '}
+      type: Label
+    layout_properties: {grid_position: 'KPJCJO,TYHQEU'}
+    name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+  - components:
+    - layout_properties: {}
+      name: label_2
+      properties: {align: left, text: 'Select Organization ID :  '}
+      type: Label
+    - layout_properties: {width: 59.58798779296876}
+      name: spacer_1
+      properties: {height: 34.199981689453125}
+      type: Spacer
+    - layout_properties: {width: 198.5999755859375}
+      name: drop_down_1
+      properties:
+        items: ['Select Organization ID :  ']
+      type: DropDown
+    layout_properties: {grid_position: 'XCKCZJ,NSQNKW'}
+    name: flow_panel_2
+    properties: {align: center}
+    type: FlowPanel
+  - components:
+    - layout_properties: {}
+      name: grid_label
+      properties: {bold: true, text: Existing Groups}
+      type: Label
+    - layout_properties: {width: 43}
+      name: spacer_1_copy
+      properties: {height: 32}
+      type: Spacer
+    - components:
+      - event_bindings: {click: create_group_button_click}
+        layout_properties: {}
+        name: create_group_button
+        properties: {align: center, text: + New Transaction Group}
+        type: Button
+      layout_properties: {expand: false, width: 509}
+      name: create_group_flow_panel
+      properties: {align: right}
+      type: FlowPanel
+    layout_properties: {grid_position: 'DCQSSQ,AOZSYB'}
+    name: grid_heading_flow_panel
+    properties: {align: center}
+    type: FlowPanel
+  - components:
+    - components:
+      - name: group_repeating_panel
+        properties: {item_template: transactionGroup.RowTemplate1}
+        type: RepeatingPanel
+      layout_properties: {width: 732}
+      name: group_grid
+      properties:
+        columns:
+        - {data_key: column_1, id: JKSDUP, title: Column 1}
+        - {data_key: column_2, id: VJQQOR, title: Column 2}
+        - {data_key: column_3, id: OJLQEN, title: Column 3}
+        - {data_key: column_4, id: RGHHOV, title: Column 4}
+        - {data_key: column_5, id: YFLWYD, title: Column 5}
+        - {data_key: cta, expand: false, id: WALMHE, title: Column 6, width: ''}
+        rows_per_page: 50
+        show_page_controls: false
+        wrap_on: never
+      type: DataGrid
+    layout_properties: {grid_position: 'KNZKHE,XDSBKI'}
+    name: flow_panel_1_copy
+    properties: {align: center}
+    type: FlowPanel
   layout_properties: {slot: default}
   name: content_panel
   properties: {}

@@ -12,6 +12,7 @@ unique_ids:
     transactionGroup.RowTemplate1: '1744093161826399009332575.20624'
     transactionSubType: '1744205821731240164308290.60696'
     transactionType: '1744197358523844483607987.5005'
+    transactionType.RowTemplate2: '1744270865876123306842526.70232'
     user: '1744205665897935031014237.1482'
   modules: {}
   scripts: {}

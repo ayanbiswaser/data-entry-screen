@@ -6,6 +6,17 @@ import anvil.server
 class transactionType(transactionTypeTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-    self.sidepanel_1.link_5.foreground = 'white'
+     self.init_components(**properties)
+     self.sidepanel_1.link_5.foreground = 'white'
+     org_data = anvil.server.call('get_transaction_groups')
+     self.group_grid.columns = [
+       {"id": "sl_no", "title": "Sl no", "data_key": "sl_no"},
+       {"id": "org_id", "title": "Org id", "data_key": "org_id"},
+       {"id": "group_name", "title": "Group name", "data_key": "group_name"},
+       {"id": "group_short_name", "title": "Group short name", "data_key": "group_short_name"},
+       {"id": "is_active", "title": "Active", "data_key": "is_active"},
+       {"id": "cta", "title": "Action", "data_key": "cta"},
+     ]
+     self.group_repeating_panel.items=org_data
+
 
