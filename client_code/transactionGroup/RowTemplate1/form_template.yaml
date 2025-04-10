@@ -1,0 +1,12 @@
+components:
+- event_bindings: {click: edit_button_click}
+  layout_properties: {column: cta}
+  name: edit_button
+  properties: {background: '', icon: 'fa:pencil', text: Edit}
+  type: Button
+container:
+  properties:
+    auto_display_data: true
+    margin: [null, null, null, null]
+  type: DataRowPanel
+is_package: true
