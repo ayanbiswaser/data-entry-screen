@@ -4,11 +4,6 @@ components:
   name: button_1
   properties: {text: Edit}
   type: Button
-- event_bindings: {click: button_2_click}
-  layout_properties: {column: view}
-  name: button_2
-  properties: {text: View}
-  type: Button
 - components:
   - layout_properties: {}
     name: label_1
