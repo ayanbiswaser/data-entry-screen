@@ -29,20 +29,6 @@ class transactionTypeForm(transactionTypeFormTemplate):
   def cancel_button_click(self, **event_args):
     open_form("transactionType")
 
-  def link_1_click(self, **event_args):
-    self.flow_panel_2.visible = False
-    self.flow_panel_8.visible = True
-    self.flow_panel_4.visible = True
-    self.flow_panel_6.visible = True
-    self.flow_panel_7.visible = True
-
-  def link_7_click(self, **event_args):
-    self.flow_panel_8.visible = False
-    self.flow_panel_2.visible = True
-    self.flow_panel_4.visible = False
-    self.flow_panel_6.visible = False
-    self.flow_panel_7.visible = False
-
   def delete_button_click(self, **event_args):
     self.save_button.visible = False
     self.cancel_button.visible = False
