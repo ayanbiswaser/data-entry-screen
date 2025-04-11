@@ -13,9 +13,14 @@ class transactionTypeForm(transactionTypeFormTemplate):
       org = [(data["org_id"])]
       self.drop_down_1.items = org
       self.drop_down_1.enabled = False
+
+      # tran_group_id = [(data["tran_group_id"])]
+      tran_group_id = [("_id123")]
+      self.drop_down_2.items = tran_group_id
+      self.drop_down_2.enabled = False
       
-      self.text_box_1.text = data["group_name"]
-      self.text_box_2.text = data["group_short_name"]
+      self.text_box_1.text = data["tran_name"]
+      self.text_box_2.text = data["tran_short_name"]
       self.check_box_1.checked = data["is_active"]
     else:
       self.delete_button.visible = False

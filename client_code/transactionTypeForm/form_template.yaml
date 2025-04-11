@@ -30,7 +30,7 @@ components:
       - components:
         - layout_properties: {}
           name: label_7
-          properties: {text: 'Transaction group Id :'}
+          properties: {text: 'Transaction group :'}
           type: Label
         - layout_properties: {width: 113.34998779296875}
           name: spacer_7
