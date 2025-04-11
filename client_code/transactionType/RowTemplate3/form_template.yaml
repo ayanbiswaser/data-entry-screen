@@ -4,15 +4,6 @@ components:
   name: button_1
   properties: {text: Edit}
   type: Button
-- components:
-  - layout_properties: {}
-    name: label_1
-    properties: {visible: true}
-    type: Label
-  layout_properties: {column: AAQFJO}
-  name: flow_panel_1
-  properties: {visible: false}
-  type: FlowPanel
 container:
   properties: {visible: true}
   type: DataRowPanel
