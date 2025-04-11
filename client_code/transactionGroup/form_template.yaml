@@ -55,7 +55,8 @@ components:
     type: FlowPanel
   - components:
     - components:
-      - name: group_repeating_panel
+      - layout_properties: {pinned: false}
+        name: group_repeating_panel
         properties: {item_template: transactionGroup.RowTemplate1}
         type: RepeatingPanel
       layout_properties: {width: 732}

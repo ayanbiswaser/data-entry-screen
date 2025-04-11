@@ -29,7 +29,11 @@ class transactionType(transactionTypeTemplate):
        {"id": "tran_group_name", "title": "Transaction Short Name", "data_key": "tran_group_name"},
        {"id": "is_active", "title": "Active", "data_key": "is_active"},
        {"id": "cta", "title": "Action", "data_key": "cta"},
+       {"id": "view", "title": "Transaction Subtype", "data_key": "view"}
      ]
      self.group_repeating_panel.items=org_data
+
+  def create_group_button_click(self, **event_args):
+    open_form('transactionTypeForm',form_type="create", form_header = "Create Transaction")
 
 
