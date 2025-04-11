@@ -68,7 +68,7 @@ class transactionTypeForm(transactionTypeFormTemplate):
     
     if self.form_type == "edit":
       edit_saved = anvil.server.call(
-        "save_edit_transaction_group", org_id, group_name, group_short_name, is_active
+        "save_edit_transaction_type", org_id, tran_group_id, tran_name, tran_short_name, is_active
       )
       if edit_saved["success"] is False:
         self.label_6.text = edit_saved["message"]
@@ -79,8 +79,7 @@ class transactionTypeForm(transactionTypeFormTemplate):
         self.button_4.visible = True
     else:
       edit_saved = anvil.server.call(
-        "save_create_transaction_group", org_id, group_name, group_short_name, is_active
-      )
+        "save_create_transaction_type",  org_id, tran_group_id, tran_name, tran_short_name, is_active)
       if edit_saved["success"] is False:
         self.label_6.text = edit_saved["message"]
         self.label_6.visible = True
