@@ -12,7 +12,6 @@ class RowTemplate4(RowTemplate4Template):
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
 
-    self.link_1.text='1'
 
   def edit_button_click(self, **event_args):
 

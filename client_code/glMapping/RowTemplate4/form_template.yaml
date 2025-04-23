@@ -23,11 +23,23 @@ components:
   name: flow_panel_1
   properties: {align: center}
   type: FlowPanel
-- event_bindings: {click: link_1_click}
-  layout_properties: {column: JKSDUP}
-  name: link_1
-  properties: {text: ''}
-  type: Link
+- components:
+  - components:
+    - name: repeating_panel_1
+      properties: {item_template: glMapping.RowTemplate4.RowTemplate2}
+      type: RepeatingPanel
+    layout_properties: {width: 666.3999877929688}
+    name: data_grid_1
+    properties:
+      columns:
+      - {data_key: column_1, id: JKSDUP, title: Column 1}
+      - {data_key: column_2, id: VJQQOR, title: Column 2}
+      - {data_key: column_3, id: OJLQEN, title: Column 3}
+    type: DataGrid
+  layout_properties: {}
+  name: flow_panel_4
+  properties: {}
+  type: FlowPanel
 container:
   properties:
     align: center
