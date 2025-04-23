@@ -43,7 +43,7 @@ class sidepanel(sidepanelTemplate):
   def link_4_click(self, **event_args):
     open_form('transactionGroup')
   def link_6_click(self, **event_args):
-    open_form('transactionSubType')
+    open_form('glMapping')
   def link_9_click(self, **event_args):
     open_form('user')
   def link_10_click(self, **event_args):

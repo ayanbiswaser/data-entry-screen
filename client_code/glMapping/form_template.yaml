@@ -1,0 +1,95 @@
+components:
+- layout_properties: {slot: logo}
+  name: image_1
+  properties: {height: 77, source: _/theme/camp_logo.png}
+  type: Image
+- layout_properties: {slot: left-nav}
+  name: sidepanel_1
+  properties: {}
+  type: form:sidepanel
+- components:
+  - components:
+    - layout_properties: {width: 47}
+      name: heading_logo
+      properties: {height: 46, visible: true}
+      type: Image
+    - layout_properties: {}
+      name: heading_label
+      properties: {bold: true, font_size: 24, text: 'GL Mapping '}
+      type: Label
+    layout_properties: {grid_position: 'CUXZJP,YPJQZQ'}
+    name: heading_flow_panel
+    properties: {}
+    type: FlowPanel
+  - components:
+    - layout_properties: {}
+      name: orgid_label
+      properties: {text: 'Select Organization ID :  '}
+      type: Label
+    - layout_properties: {width: 16}
+      name: orgid_spacer_2
+      properties: {height: 32}
+      type: Spacer
+    - layout_properties: {width: 346}
+      name: orgid_dropdown
+      properties: {include_placeholder: true, placeholder: Select Organization ID, visible: true}
+      type: DropDown
+    layout_properties: {grid_position: 'KYSEXE,VBJKTR'}
+    name: orgid_flow_panel
+    properties: {align: center}
+    type: FlowPanel
+  - components:
+    - layout_properties: {}
+      name: grid_label
+      properties: {bold: true, text: Existing Groups}
+      type: Label
+    - layout_properties: {width: 43}
+      name: spacer_1
+      properties: {height: 32}
+      type: Spacer
+    - components:
+      - event_bindings: {click: create_group_button_click}
+        layout_properties: {}
+        name: create_new_map
+        properties: {align: center, text: + New Map}
+        type: Button
+      layout_properties: {expand: false, width: 509}
+      name: create_group_flow_panel
+      properties: {align: right}
+      type: FlowPanel
+    layout_properties: {grid_position: 'ZXRQYK,UEWNZI'}
+    name: grid_heading_flow_panel
+    properties: {align: center}
+    type: FlowPanel
+  - components:
+    - components:
+      - layout_properties: {pinned: false}
+        name: group_repeating_panel
+        properties: {item_template: transactionGroup.RowTemplate1}
+        type: RepeatingPanel
+      layout_properties: {width: 732}
+      name: group_grid
+      properties:
+        columns:
+        - {data_key: column_1, id: JKSDUP, title: Column 1}
+        - {data_key: column_2, id: VJQQOR, title: Column 2}
+        - {data_key: column_3, id: OJLQEN, title: Column 3}
+        - {data_key: column_4, id: RGHHOV, title: Column 4}
+        - {data_key: column_5, id: YFLWYD, title: Column 5}
+        - {data_key: cta, expand: false, id: WALMHE, title: Column 6, width: ''}
+        rows_per_page: 50
+        show_page_controls: false
+        wrap_on: never
+      type: DataGrid
+    layout_properties: {grid_position: 'MPTVKH,ZSVSQN'}
+    name: flow_panel_1
+    properties: {align: center}
+    type: FlowPanel
+  layout_properties: {slot: default}
+  name: main_column_panel
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

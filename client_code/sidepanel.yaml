@@ -70,7 +70,7 @@ components:
       properties:
         spacing:
           margin: ['0', null, '0', null]
-        text: Transaction Sub Type
+        text: GL Mapping
         visible: true
       type: Link
     layout_properties: {grid_position: 'QUSVEU,RNHJXC'}
