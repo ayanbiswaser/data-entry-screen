@@ -10,7 +10,7 @@ components:
     properties: {align: center}
     type: FlowPanel
   - components:
-    - event_bindings: {click: edit_button_click}
+    - event_bindings: {click: delete_button_click}
       layout_properties: {}
       name: delete_button
       properties: {align: center, background: '#f51000', icon: 'fa:trash', text: ''}
@@ -23,6 +23,11 @@ components:
   name: flow_panel_1
   properties: {align: center}
   type: FlowPanel
+- event_bindings: {click: link_1_click}
+  layout_properties: {column: JKSDUP}
+  name: link_1
+  properties: {text: ''}
+  type: Link
 container:
   properties:
     align: center

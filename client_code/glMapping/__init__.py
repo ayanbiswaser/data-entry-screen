@@ -8,17 +8,28 @@ class glMapping(glMappingTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    org_data = [
-        {"sl_no":"1", "org_id":"123","group_name": "Retail", "group_short_name": "RET", "is_active": True},
-        {"sl_no":"2", "org_id":"124","group_name": "Wholesale", "group_short_name": "WHO", "is_active": False}
+    self.text_box_1.height = "100px"
+    self.text_box_1.border = "2px solid #ccc"
+
+    
+
+
+
+    data = [
+        {"map":"1", "tran_type":"123","sub_type_id": "Retail", "priority": "RET", "is_active": True},
+        {"map":"2", "tran_type":"124","sub_type_id": "Wholesale", "priority": "WHO", "is_active": False}
     ]
     self.group_grid.columns = [
-      {"id": "sl_no", "title": "Sl no", "data_key": "sl_no"},
-      {"id": "org_id", "title": "Org id", "data_key": "org_id"},
-      {"id": "group_name", "title": "Group name", "data_key": "group_name"},
-      {"id": "group_short_name", "title": "Group short name", "data_key": "group_short_name"},
+      {"id": "map", "title": "MAP", "data_key": "map"},
+      {"id": "tran_type", "title": "TRAN TYPE", "data_key": "tran_type"},
+      {"id": "sub_type_id", "title": "SUB TYPE ID", "data_key": "sub_type_id"},
+      {"id": "priority", "title": "PRIORITY", "data_key": "priority"},
       {"id": "is_active", "title": "Active", "data_key": "is_active"},
       {"id": "cta", "title": "Action", "data_key": "cta"},
     ]
-    self.gl_mapping_repeating_panel.items=org_data
+    self.gl_mapping_repeating_panel.items=data
     # Any code you write here will run before the form opens.
+
+  def create_group_button_click(self, **event_args):
+    print("new map added")
+

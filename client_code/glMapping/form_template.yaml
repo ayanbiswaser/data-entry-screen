@@ -22,11 +22,7 @@ components:
     properties: {}
     type: FlowPanel
   - components:
-    - layout_properties: {}
-      name: grid_label
-      properties: {bold: true, text: ''}
-      type: Label
-    - layout_properties: {width: 43}
+    - layout_properties: {width: 551.3749755859375}
       name: spacer_1
       properties: {height: 32}
       type: Spacer
@@ -34,15 +30,50 @@ components:
       - event_bindings: {click: create_group_button_click}
         layout_properties: {}
         name: create_new_map
-        properties: {align: center, text: + New Map}
+        properties: {align: right, text: + New Map}
         type: Button
-      layout_properties: {expand: false, width: 509}
+      layout_properties: {expand: false, width: 118.562951171875}
       name: create_group_flow_panel
       properties: {align: right}
       type: FlowPanel
-    layout_properties: {grid_position: 'ZXRQYK,UEWNZI'}
+    layout_properties: {grid_position: 'OFPSFV,NEDOYS'}
     name: grid_heading_flow_panel
     properties: {align: center}
+    type: FlowPanel
+  - components:
+    - components:
+      - event_bindings: {}
+        layout_properties: {expand: false, width: 635.3999267578125}
+        name: text_box_1
+        properties: {align: center, border: '0', enabled: true, placeholder: 'Searching ', role: null, text: '', underline: false}
+        type: TextBox
+      layout_properties: {width: 674.3999267578125}
+      name: flow_panel_3
+      properties: {}
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: search
+        properties: {icon: 'fa:search', text: 'SEARCH '}
+        type: Button
+      name: flow_panel_4
+      properties: {}
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: button_2
+        properties: {icon: 'fa:filter', text: ''}
+        type: Button
+      name: flow_panel_5
+      properties: {}
+      type: FlowPanel
+    - layout_properties: {width: 680}
+      name: flow_panel_6
+      properties: {}
+      type: FlowPanel
+    layout_properties: {grid_position: 'CCEXNJ,NHMZXE'}
+    name: flow_panel_2
+    properties: {}
     type: FlowPanel
   - components:
     - components:
