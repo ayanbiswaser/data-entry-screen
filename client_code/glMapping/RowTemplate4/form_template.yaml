@@ -28,13 +28,14 @@ components:
     - name: repeating_panel_1
       properties: {item_template: glMapping.RowTemplate4.RowTemplate2}
       type: RepeatingPanel
-    layout_properties: {width: 666.3999877929688}
+    layout_properties: {expand: true, width: 666.3999877929688}
     name: data_grid_1
     properties:
       columns:
       - {data_key: column_1, id: JKSDUP, title: Column 1}
       - {data_key: column_2, id: VJQQOR, title: Column 2}
       - {data_key: column_3, id: OJLQEN, title: Column 3}
+      - {data_key: column_4, id: WIYWAU, title: Column 4}
       visible: true
     type: DataGrid
   layout_properties: {}
@@ -44,7 +45,7 @@ components:
 - event_bindings: {click: link_1_click}
   layout_properties: {column: map}
   name: link_1
-  properties: {text: Click}
+  properties: {icon: 'fa:angle-down', text: ''}
   type: Link
 container:
   properties:

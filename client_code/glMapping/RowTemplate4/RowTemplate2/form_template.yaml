@@ -1,3 +1,20 @@
-components: []
+components:
+- layout_properties: {column: mapping}
+  name: drop_down_1
+  properties: {include_placeholder: false, placeholder: ''}
+  type: DropDown
+- layout_properties: {column: debit_account}
+  name: drop_down_2
+  properties: {}
+  type: DropDown
+- layout_properties: {column: credit_account}
+  name: drop_down_3
+  properties: {}
+  type: DropDown
+- event_bindings: {click: delete_button_click}
+  layout_properties: {column: cta}
+  name: delete_button
+  properties: {align: center, background: '#f51000', icon: 'fa:trash', text: ''}
+  type: Button
 container: {type: DataRowPanel}
 is_package: true
