@@ -1,9 +1,12 @@
-from ._anvil_designer import RowTemplate1Template
+from ._anvil_designer import RowTemplate4Template
 from anvil import *
 import anvil.server
+from anvil import Notification, Label
 
 
-class RowTemplate1(RowTemplate1Template):
+
+
+class RowTemplate4(RowTemplate4Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -11,4 +14,9 @@ class RowTemplate1(RowTemplate1Template):
 
   def edit_button_click(self, **event_args):
     print(self.item)
-    open_form('Form2',form_type="edit", form_header = "Edit Transaction Group", data=self.item)
+
+    Notification(
+    "Edit successful",
+    title="Success",
+    style="success"
+    ).show()

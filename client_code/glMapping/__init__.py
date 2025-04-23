@@ -20,5 +20,5 @@ class glMapping(glMappingTemplate):
       {"id": "is_active", "title": "Active", "data_key": "is_active"},
       {"id": "cta", "title": "Action", "data_key": "cta"},
     ]
-    self.group_repeating_panel.items=org_data
+    self.gl_mapping_repeating_panel.items=org_data
     # Any code you write here will run before the form opens.

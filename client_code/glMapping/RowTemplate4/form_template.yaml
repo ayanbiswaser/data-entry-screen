@@ -12,8 +12,8 @@ components:
   - components:
     - event_bindings: {click: edit_button_click}
       layout_properties: {}
-      name: edit_button_copy
-      properties: {align: center, background: '', icon: 'fa:pencil', text: ''}
+      name: delete_button
+      properties: {align: center, background: '#f51000', icon: 'fa:trash', text: ''}
       type: Button
     layout_properties: {}
     name: flow_panel_3
@@ -25,8 +25,8 @@ components:
   type: FlowPanel
 container:
   properties:
+    align: center
     auto_display_data: true
     margin: [null, null, null, null]
-    visible: true
   type: DataRowPanel
 is_package: true

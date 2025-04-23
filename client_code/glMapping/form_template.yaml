@@ -23,25 +23,8 @@ components:
     type: FlowPanel
   - components:
     - layout_properties: {}
-      name: orgid_label
-      properties: {text: 'Select Organization ID :  '}
-      type: Label
-    - layout_properties: {width: 16}
-      name: orgid_spacer_2
-      properties: {height: 32}
-      type: Spacer
-    - layout_properties: {width: 346}
-      name: orgid_dropdown
-      properties: {include_placeholder: true, placeholder: Select Organization ID, visible: true}
-      type: DropDown
-    layout_properties: {grid_position: 'KYSEXE,VBJKTR'}
-    name: orgid_flow_panel
-    properties: {align: center}
-    type: FlowPanel
-  - components:
-    - layout_properties: {}
       name: grid_label
-      properties: {bold: true, text: Existing Groups}
+      properties: {bold: true, text: ''}
       type: Label
     - layout_properties: {width: 43}
       name: spacer_1
@@ -64,10 +47,10 @@ components:
   - components:
     - components:
       - layout_properties: {pinned: false}
-        name: group_repeating_panel
-        properties: {item_template: transactionGroup.RowTemplate1}
+        name: gl_mapping_repeating_panel
+        properties: {item_template: glMapping.RowTemplate4}
         type: RepeatingPanel
-      layout_properties: {width: 732}
+      layout_properties: {expand: true, width: 732}
       name: group_grid
       properties:
         columns:

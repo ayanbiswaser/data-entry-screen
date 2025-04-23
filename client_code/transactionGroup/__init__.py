@@ -8,6 +8,7 @@ class transactionGroup(transactionGroupTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.sidepanel_1.link_4.foreground = 'white'
+    
     org_data = [
         {"sl_no":"1", "org_id":"123","group_name": "Retail", "group_short_name": "RET", "is_active": True},
         {"sl_no":"2", "org_id":"124","group_name": "Wholesale", "group_short_name": "WHO", "is_active": False}
