@@ -10,6 +10,8 @@ class RowTemplate4(RowTemplate4Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    print(self.item)
     # Any code you write here will run before the form opens.
 
 
@@ -30,4 +32,4 @@ class RowTemplate4(RowTemplate4Template):
     ).show()
 
   def link_1_click(self, **event_args):
-    print("Yes")
+    self.flow_panel_4.visible=not self.flow_panel_4.visible

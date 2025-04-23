@@ -35,11 +35,17 @@ components:
       - {data_key: column_1, id: JKSDUP, title: Column 1}
       - {data_key: column_2, id: VJQQOR, title: Column 2}
       - {data_key: column_3, id: OJLQEN, title: Column 3}
+      visible: true
     type: DataGrid
   layout_properties: {}
   name: flow_panel_4
-  properties: {}
+  properties: {visible: false}
   type: FlowPanel
+- event_bindings: {click: link_1_click}
+  layout_properties: {column: map}
+  name: link_1
+  properties: {text: Click}
+  type: Link
 container:
   properties:
     align: center
