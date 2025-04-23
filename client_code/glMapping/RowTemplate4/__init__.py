@@ -11,7 +11,8 @@ class RowTemplate4(RowTemplate4Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    print(self.item)
+    self.data_grid_1
+    print(self.item['map'])
     # Any code you write here will run before the form opens.
 
 
