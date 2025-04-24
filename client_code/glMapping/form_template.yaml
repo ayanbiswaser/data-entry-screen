@@ -45,16 +45,17 @@ components:
       - event_bindings: {}
         layout_properties: {expand: false, width: 635.3999267578125}
         name: text_box_1
-        properties: {align: center, border: '0', enabled: true, placeholder: 'Searching ', role: null, text: '', underline: false}
+        properties: {align: center, border: '0', enabled: true, placeholder: 'Searching ', role: x-textbox, text: '', underline: false}
         type: TextBox
       layout_properties: {width: 674.3999267578125}
       name: flow_panel_3
       properties: {}
       type: FlowPanel
     - components:
-      - layout_properties: {}
+      - event_bindings: {click: search_click}
+        layout_properties: {}
         name: search
-        properties: {icon: 'fa:search', text: 'SEARCH '}
+        properties: {icon: 'fa:search', role: x-button, text: 'SEARCH '}
         type: Button
       name: flow_panel_4
       properties: {}
@@ -62,7 +63,7 @@ components:
     - components:
       - layout_properties: {}
         name: button_2
-        properties: {icon: 'fa:filter', text: ''}
+        properties: {icon: 'fa:filter', role: x-button, text: ''}
         type: Button
       name: flow_panel_5
       properties: {}
@@ -71,7 +72,7 @@ components:
       name: flow_panel_6
       properties: {}
       type: FlowPanel
-    layout_properties: {grid_position: 'CCEXNJ,NHMZXE'}
+    layout_properties: {full_width_row: false, grid_position: 'CCEXNJ,NHMZXE'}
     name: flow_panel_2
     properties: {}
     type: FlowPanel

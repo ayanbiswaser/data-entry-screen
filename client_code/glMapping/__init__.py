@@ -1,6 +1,7 @@
 from ._anvil_designer import glMappingTemplate
 from anvil import *
 import anvil.server
+from time import sleep
 
 
 class glMapping(glMappingTemplate):
@@ -32,4 +33,11 @@ class glMapping(glMappingTemplate):
 
   def create_group_button_click(self, **event_args):
     print("new map added")
+
+  def search_click(self, **event_args):
+    self.loading_indicator = anvil.server.loading_indicator()
+    self.loading_indicator.start()
+    sleep(5)
+    self.loading_indicator.stop()
+    
 

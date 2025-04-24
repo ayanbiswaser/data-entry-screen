@@ -301,4 +301,11 @@ roles:
 - components: [Label, Link]
   name: body
 - components: [Label, Link]
+  display_in_toolbox: false
   name: input-prompt
+- components: [Button]
+  display_in_toolbox: true
+  name: x-button
+  title: X-Button
+- components: [TextBox]
+  name: x-textbox

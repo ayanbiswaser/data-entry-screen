@@ -715,3 +715,32 @@ input[disabled] ~ span {
 
 
 
+.anvil-role-x-button .btn{
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+}
+
+
+.anvil-role-x-textbox{
+  border: 2px solid #4A90E2;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.anvil-role-x-textbox input{
+    color: white;
+    height: 300px;
+    width: 600px;
+    border: 2px solid black;
+    border-radius: 0px;
+}
