@@ -1,6 +1,9 @@
 allow_embedding: false
 correct_dependency_ids: {}
-dependencies: []
+dependencies:
+- dep_id: dep_els52vcri2i64c
+  resolution_hints: {app_id: 3PIDO5P3H4VPEMPL, name: routing, package_name: routing}
+  version: {version_tag: v0.3.2}
 metadata: {logo_img: 'asset:camp_logo.png'}
 name: Clone of Data Entry Screen (2)
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">'}
