@@ -8,7 +8,10 @@ class transactionType(transactionTypeTemplate):
     # Set Form properties and Data Bindings.
      self.init_components(**properties)
      self.sidepanel_1.link_5.foreground = 'white'
-     data = anvil.server.call('get_transaction_types')
+     data = [
+        {"created_at":"1", "org_id":"123","tran_name": "Retail", "tran_short_name": "RET", "tran_group_name":"TG001", "is_active": True},
+        {"created_at":"2", "org_id":"124","tran_name": "Wholesale", "tran_short_name": "WHO", "tran_group_name":"TG002", "is_active": False}
+    ]
 
      self.data_grid_1.columns = [
        {"id": "created_at", "title": "created At", "data_key": "created_at"},

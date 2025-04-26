@@ -1,6 +1,7 @@
 from ._anvil_designer import sidepanelTemplate
 from anvil import *
 import anvil.server
+from routing.router import navigate
 
 
 class sidepanel(sidepanelTemplate):
@@ -39,14 +40,14 @@ class sidepanel(sidepanelTemplate):
 
   #navigations
   def link_5_click(self, **event_args):
-    open_form('transactionType')
+    navigate(path='transactionType')
   def link_4_click(self, **event_args):
-    open_form('transactionGroup')
+    navigate(path='transactionGroup')
   def link_6_click(self, **event_args):
-    open_form('glMapping')
+    navigate(path='glMapping')
   def link_9_click(self, **event_args):
-    open_form('user')
+    navigate(path="user")
   def link_10_click(self, **event_args):
-    open_form('group')
+    navigate(path='group')
   def link_3_click(self, **event_args):
-    open_form('reports')
+    navigate(path='reports')

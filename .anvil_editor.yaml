@@ -10,6 +10,7 @@ unique_ids:
     glMapping.RowTemplate4: '1745400542814759046861467.0736'
     glMapping.RowTemplate4.RowTemplate2: '1745407274286870024803785.2415'
     group: '1744202243699587471548160.0763'
+    home: '174563242130598374991448.03197'
     reports: '1744183663493111161830017.33493'
     sidepanel: '1744203067945831214821205.0674'
     transactionGroup: BVEWRTQCDXZNMQWZLB7NOKMIEZAPDZF7
@@ -19,6 +20,9 @@ unique_ids:
     transactionType.RowTemplate3: '1744348254774518752218079.8229'
     transactionTypeForm: '1744344309796428561547786.6369'
     user: '1744205665897935031014237.1482'
-  modules: {}
+  modules:
+    routes: '1745631441233613191316906.4913'
+    startup: '174563150001041018485233.41212'
   scripts: {}
-  server_modules: {}
+  server_modules:
+    ServerRoutes: '1745633414256396903941530.07947'
