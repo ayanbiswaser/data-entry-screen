@@ -50,4 +50,4 @@ class sidepanel(sidepanelTemplate):
   def link_10_click(self, **event_args):
     navigate(path='group')
   def link_3_click(self, **event_args):
-    navigate(path='reports')
+    navigate(path='login')

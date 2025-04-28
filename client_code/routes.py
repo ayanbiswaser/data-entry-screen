@@ -6,6 +6,11 @@ class HomeType(Route):
     path = "/"
     form = "home"
 
+class AdminLogin(Route):
+    path = "/login"
+    form = "login"
+
+
 class TransactionTypeRoute(Route):
     path = "/transactionType"
     form = "transactionType"
