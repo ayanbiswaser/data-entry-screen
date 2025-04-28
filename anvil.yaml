@@ -1,5 +1,29 @@
 allow_embedding: false
 correct_dependency_ids: {}
+db_schema:
+  users:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: email
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: enabled
+      type: bool
+    - admin_ui: {order: 2, width: 200}
+      name: last_login
+      type: datetime
+    - admin_ui: {order: 3, width: 200}
+      name: password_hash
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      name: n_password_failures
+      type: number
+    - admin_ui: {order: 5, width: 200}
+      name: confirmed_email
+      type: bool
+    server: full
+    title: Users
 dependencies:
 - dep_id: dep_els52vcri2i64c
   resolution_hints: {app_id: 3PIDO5P3H4VPEMPL, name: routing, package_name: routing}
@@ -18,6 +42,12 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/tables.yml
+- client_config: {allow_signup: false, confirm_email: true, enable_automatically: true, require_secure_passwords: true, use_email: true, use_google: true}
+  server_config: {user_table: users}
+  source: /runtime/services/anvil/users.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/google.yml
 startup: {module: startup, type: module}
 startup_form: null
 uplink_visible: true
