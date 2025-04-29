@@ -9,6 +9,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import Notification, Label
+from routing.router import navigate
+
 
 
 class auth(authTemplate):
@@ -54,6 +56,9 @@ class auth(authTemplate):
   def logout_click(self, **event_args):
     anvil.users.logout()
     self.find_user()
+
+  def nav_link_1_click(self, **event_args):
+    na
 
     
     

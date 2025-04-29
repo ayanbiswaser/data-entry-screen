@@ -16,6 +16,11 @@ components:
   name: spacer_1
   properties: {height: 73.60000610351562}
   type: Spacer
+- event_bindings: {click: nav_link_1_click}
+  layout_properties: {grid_position: 'UBBMLA,TAEUBK'}
+  name: nav_link_1
+  properties: {text: Create-user}
+  type: form:dep_els52vcri2i64c:router.NavLink
 - components:
   - event_bindings: {click: signup_click}
     layout_properties: {}

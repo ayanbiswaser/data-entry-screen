@@ -22,7 +22,8 @@ class createUser(createUserTemplate):
     try:
         # user = anvil.users.signup_with_email(email, password)
         # user['role'] = 'user'
-      
-        alert("User account created successfully.")
+      res= anvil.server.call('set_user_role',email,password)      
+      alert("User account created successfully.")
+      print(res)
     except anvil.users.UserExists:
         alert("This email is already registered.")
