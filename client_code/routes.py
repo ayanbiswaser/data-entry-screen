@@ -10,7 +10,7 @@ from routing.router import Route
 
 class HomeType(Route):
     path = "/"
-    form = "auth"
+    form = "adminLogin"
 
 class AdminLogin(Route):
     path = "/login"
