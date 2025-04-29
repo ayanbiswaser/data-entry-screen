@@ -7,6 +7,8 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.users
 import anvil.server
+from anvil import Notification, Label
+
 
 
 class createUser(createUserTemplate):
@@ -22,8 +24,23 @@ class createUser(createUserTemplate):
     try:
         # user = anvil.users.signup_with_email(email, password)
         # user['role'] = 'user'
-      res= anvil.server.call('set_user_role',email,password)      
-      alert("User account created successfully.")
-      print(res)
-    except anvil.users.UserExists:
-        alert("This email is already registered.")
+      res=anvil.server.call('set_user_role',email,password) 
+      if res['success'] is True:
+        Notification(
+          "User account created successfully",
+          title="Success",
+          style="success"
+         ).show()
+      else:
+         Notification(
+          res['message'],
+          title="Failed",
+          style="danger"
+         ).show()
+    except  Exception as e:
+        Notification(
+          "Internal Error",
+          title="Failed",
+          style="danger"
+         ).show()
+        print(e)

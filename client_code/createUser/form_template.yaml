@@ -21,7 +21,7 @@ components:
   - components:
     - layout_properties: {}
       name: text_box_2
-      properties: {placeholder: Password}
+      properties: {hide_text: true, placeholder: Password}
       type: TextBox
     layout_properties: {grid_position: 'TDCXNQ,AOOACB'}
     name: flow_panel_3

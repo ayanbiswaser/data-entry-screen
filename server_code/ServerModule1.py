@@ -25,5 +25,9 @@ def set_user_role(email, password):
     user=anvil.users.signup_with_email(email, password)
     user['role'] = 'user'
     return {'success':True}
-  except:
-    return {'success':False}
+  except anvil.users.PasswordNotAcceptable:
+    return {'success':False, "message": "The password provided is not acceptable."}
+  except anvil.users.UserExists:
+    return {'success':False, "message": "A user with this email already exists."}
+  except Exception as e:
+    return {'success':False, 'message':e}
