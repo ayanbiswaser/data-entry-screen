@@ -8,6 +8,8 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from anvil import Notification, Label
+
 
 class auth(authTemplate):
   def __init__(self, **properties):
@@ -29,13 +31,25 @@ class auth(authTemplate):
       self.login.visible=True
       self.signup.visible=True
       self.logout.visible=False
+    return user
   def signup_click(self, **event_args):
     anvil.users.signup_with_form()
-    self.find_user()
+    Notification(
+      "Signup successful, please login",
+      title="Success",
+      style="success"
+     ).show()
 
   def login_click(self, **event_args):
     anvil.users.login_with_form()
-    self.find_user()
+    user=self.find_user()
+    Notification(
+     f"{user['email']} you are login",
+     title="Success",
+     style="success",
+     timeout=5
+    ).show()
+    
 
   def logout_click(self, **event_args):
     anvil.users.logout()
