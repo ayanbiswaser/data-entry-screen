@@ -309,3 +309,7 @@ roles:
   title: X-Button
 - components: [TextBox]
   name: x-textbox
+- components: [ColumnPanel]
+  name: auth-card
+- components: [Button]
+  name: auth-button

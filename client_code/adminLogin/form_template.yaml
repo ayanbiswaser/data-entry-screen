@@ -1,53 +1,91 @@
 components:
-- layout_properties: {grid_position: 'PCOOIN,MYPWVH'}
-  name: spacer_1
-  properties: {height: 32}
-  type: Spacer
-- components:
-  - layout_properties: {}
-    name: label_1
-    properties: {bold: true, font_size: 20, text: Login}
-    type: Label
-  layout_properties: {grid_position: 'DDINCY,FXQCXM'}
-  name: flow_panel_1
-  properties: {align: center}
-  type: FlowPanel
-- layout_properties: {grid_position: 'UEKXFX,YRVSVL'}
-  name: spacer_2
-  properties: {height: 32}
-  type: Spacer
 - components:
   - components:
-    - event_bindings: {}
-      layout_properties: {}
-      name: email
-      properties:
-        placeholder: Email
-        role: [x-textbox]
-      type: TextBox
-    layout_properties: {grid_position: 'OCJDPW,ONSFKH'}
-    name: flow_panel_2
-    properties: {align: center}
-    type: FlowPanel
-  - layout_properties: {grid_position: 'OOJPYS,ZMERYB'}
-    name: flow_panel_3
-    properties: {}
-    type: FlowPanel
-  - layout_properties: {grid_position: 'RXBSVP,WKVQNQ'}
-    name: flow_panel_4
-    properties: {}
-    type: FlowPanel
-  - layout_properties: {grid_position: 'GTWGDN,GZXDLB'}
-    name: flow_panel_5
-    properties: {}
-    type: FlowPanel
-  - layout_properties: {grid_position: 'TNYSYZ,EFZOLV'}
-    name: flow_panel_6
-    properties: {}
-    type: FlowPanel
-  layout_properties: {grid_position: 'KIUIEI,PCBKCT'}
-  name: card_1
-  properties: {background: '#ffffff', role: card}
-  type: ColumnPanel
+    - components:
+      - layout_properties: {}
+        name: label_1
+        properties: {bold: true, font_size: 24, text: Login}
+        type: Label
+      layout_properties: {grid_position: 'DDCNQD,CXMGJR'}
+      name: flow_panel_1
+      properties: {align: center}
+      type: FlowPanel
+    - layout_properties: {grid_position: 'NGWCLF,YWDWOV'}
+      name: spacer_2
+      properties: {height: 5.600006103515625}
+      type: Spacer
+    - components:
+      - event_bindings: {}
+        layout_properties: {width: 300}
+        name: email
+        properties:
+          placeholder: Email
+          role: [x-textbox]
+        type: TextBox
+      layout_properties: {grid_position: 'OCJDPW,ONSFKH'}
+      name: flow_panel_2
+      properties: {align: center}
+      type: FlowPanel
+    - components:
+      - components:
+        - layout_properties: {}
+          name: link_1
+          properties: {spacing_below: none, text: 'Fotgot your password?'}
+          type: Link
+        layout_properties: {width: 279.362}
+        name: flow_panel_7
+        properties: {align: right, spacing_below: none}
+        type: FlowPanel
+      - components:
+        - layout_properties: {width: 300}
+          name: password
+          properties:
+            align: left
+            hide_text: true
+            placeholder: Password
+            role: [x-textbox]
+          type: TextBox
+        layout_properties: {width: 529.55}
+        name: flow_panel_8
+        properties: {align: center}
+        type: FlowPanel
+      data_bindings: []
+      layout_properties: {grid_position: 'WUCVBZ,XEAMUH'}
+      name: flow_panel_3
+      properties: {align: center, vertical_align: top}
+      type: FlowPanel
+    - components:
+      - layout_properties: {}
+        name: button_1
+        properties:
+          align: center
+          role: [auth-button]
+          text: Login
+        type: Button
+      layout_properties: {grid_position: 'RXBSVP,WKVQNQ'}
+      name: flow_panel_4
+      properties: {align: center, vertical_align: middle}
+      type: FlowPanel
+    - layout_properties: {grid_position: 'GTWGDN,GZXDLB'}
+      name: flow_panel_5
+      properties: {}
+      type: FlowPanel
+    - layout_properties: {grid_position: 'TNYSYZ,EFZOLV'}
+      name: flow_panel_6
+      properties: {}
+      type: FlowPanel
+    data_bindings: []
+    layout_properties: {}
+    name: card_1
+    properties:
+      background: '#ffffff'
+      border: 2px solid
+      role: [card, auth-card]
+      wrap_on: never
+    type: ColumnPanel
+  layout_properties: {grid_position: 'KIUIEI,TOWHHV'}
+  name: flow_panel_9
+  properties: {align: center}
+  type: FlowPanel
 container: {type: ColumnPanel}
 is_package: true
