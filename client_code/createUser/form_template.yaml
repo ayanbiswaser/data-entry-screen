@@ -1,8 +1,54 @@
 components:
-- layout_properties: {slot: default}
+- components:
+  - components:
+    - layout_properties: {}
+      name: label_1
+      properties: {bold: true, text: Create User}
+      type: Label
+    layout_properties: {grid_position: 'PKXNEX,OEKKHL'}
+    name: flow_panel_1
+    properties: {align: center}
+    type: FlowPanel
+  - components:
+    - layout_properties: {}
+      name: text_box_1
+      properties: {placeholder: Email}
+      type: TextBox
+    layout_properties: {grid_position: 'QREBWP,DEQEMG'}
+    name: flow_panel_2
+    properties: {align: center}
+    type: FlowPanel
+  - components:
+    - layout_properties: {}
+      name: text_box_2
+      properties: {placeholder: Password}
+      type: TextBox
+    layout_properties: {grid_position: 'TDCXNQ,AOOACB'}
+    name: flow_panel_3
+    properties: {align: center}
+    type: FlowPanel
+  - components:
+    - event_bindings: {click: create_user_submit_click}
+      layout_properties: {}
+      name: create_user_submit
+      properties: {text: 'SUBMIT '}
+      type: Button
+    layout_properties: {grid_position: 'MHGOHW,BMWRRD'}
+    name: flow_panel_4
+    properties: {align: center}
+    type: FlowPanel
+  layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
+- layout_properties: {slot: logo}
+  name: image_1
+  properties: {height: 77, source: _/theme/camp_logo.png}
+  type: Image
+- layout_properties: {slot: left-nav}
+  name: sidepanel_1
+  properties: {}
+  type: form:sidepanel
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

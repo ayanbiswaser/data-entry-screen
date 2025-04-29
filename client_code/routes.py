@@ -15,6 +15,9 @@ class HomeType(Route):
 class AdminLogin(Route):
     path = "/login"
     form = "auth"
+class CreateUser(Route):
+    path = "/create-user"
+    form = "createUser"
 
 
 class TransactionTypeRoute(Route):
