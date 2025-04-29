@@ -21,5 +21,9 @@ import anvil.server
 
 @anvil.server.callable
 def set_user_role(email, password):
+  try:
     user=anvil.users.signup_with_email(email, password)
     user['role'] = 'user'
+    return {'success':True}
+  except:
+    return {'success':False}
