@@ -766,7 +766,7 @@ input[disabled] ~ span {
   border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.anvil-role-auth-button .btn{
+.anvil-role-auth-button .btn, .anvil-role-auth-button .btn:active, .anvil-role-auth-button .btn:active:focus{
   width: 300px;
   text-align: center;
   padding: 10px 0px;

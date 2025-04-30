@@ -15,6 +15,9 @@ class adminLogin(adminLoginTemplate):
     self.init_components(**properties)
 
 
+    self.link_2.add_component(self.image_1)
+
+
     # Any code you write here will run before the form opens.
 
 
