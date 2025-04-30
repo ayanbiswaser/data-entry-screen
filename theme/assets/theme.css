@@ -727,33 +727,33 @@ input[disabled] ~ span {
 
 
 .anvil-role-x-textbox{
-  border: 2px solid rgb(228, 228, 231);
+  border: 1px solid rgb(228, 228, 231);
   border-radius: 8px;
   padding: 10px;
   font-size: 16px;
   color: #333;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
   transition: border-color 0.3s ease;
 }
 
 .anvil-role-x-textbox input{
-  border: 2px solid rgb(228, 228, 231);
+  border: 1px solid rgb(228, 228, 231);
   border-radius: 8px;
   padding: 10px;
   font-size: 16px;
   color: #333;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
   transition: border-color 0.3s ease;
 }
 .anvil-role-x-textbox:focus{
-  border: 2px solid rgb(228, 228, 231);
+  border: 1px solid rgb(228, 228, 231);
   border-radius: 8px;
   padding: 10px;
   font-size: 16px;
   color: #333;
-  background-color: #f9f9f9;
+  background-color: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease;
 }
@@ -762,8 +762,9 @@ input[disabled] ~ span {
 .anvil-role-auth-card{
   width: 400px;
   min-width: 300px;
-  border: 2px solid black;
+  border: 1px solid rgb(228, 228, 231);
   border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .anvil-role-auth-button .btn{
   width: 300px;

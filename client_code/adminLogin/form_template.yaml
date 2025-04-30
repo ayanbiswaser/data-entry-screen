@@ -15,12 +15,22 @@ components:
       properties: {height: 5.600006103515625}
       type: Spacer
     - components:
+      - components:
+        - layout_properties: {}
+          name: label_3
+          properties: {align: left, bold: false, font: '', font_size: 16, spacing_below: none, text: Email}
+          type: Label
+        layout_properties: {width: 291.7749877929688}
+        name: flow_panel_10
+        properties: {spacing_below: none}
+        type: FlowPanel
       - event_bindings: {}
         layout_properties: {width: 300}
         name: email
         properties:
-          placeholder: Email
+          placeholder: e@example.com
           role: [x-textbox]
+          spacing_above: none
         type: TextBox
       layout_properties: {grid_position: 'OCJDPW,ONSFKH'}
       name: flow_panel_2
@@ -29,12 +39,20 @@ components:
     - components:
       - components:
         - layout_properties: {}
+          name: label_2
+          properties: {align: left, font_size: 16, text: 'Password '}
+          type: Label
+        - layout_properties: {width: 71.74998779296875}
+          name: spacer_1
+          properties: {height: 32}
+          type: Spacer
+        - layout_properties: {}
           name: link_1
           properties: {spacing_below: none, text: 'Fotgot your password?'}
           type: Link
-        layout_properties: {width: 279.362}
+        layout_properties: {width: 297.5500122070313}
         name: flow_panel_7
-        properties: {align: right, spacing_below: none}
+        properties: {align: center, spacing_below: none}
         type: FlowPanel
       - components:
         - layout_properties: {width: 300}
@@ -47,7 +65,7 @@ components:
           type: TextBox
         layout_properties: {width: 529.55}
         name: flow_panel_8
-        properties: {align: center}
+        properties: {align: center, spacing_above: none}
         type: FlowPanel
       data_bindings: []
       layout_properties: {grid_position: 'WUCVBZ,XEAMUH'}
@@ -66,9 +84,15 @@ components:
       name: flow_panel_4
       properties: {align: center, vertical_align: middle}
       type: FlowPanel
-    - layout_properties: {grid_position: 'GTWGDN,GZXDLB'}
+    - components:
+      - data_bindings: []
+        layout_properties: {}
+        name: button_2
+        properties: {icon: 'fa:google', role: filled, text: 'login with GOOGLE '}
+        type: Button
+      layout_properties: {grid_position: 'GTWGDN,GZXDLB'}
       name: flow_panel_5
-      properties: {}
+      properties: {align: center}
       type: FlowPanel
     - layout_properties: {grid_position: 'TNYSYZ,EFZOLV'}
       name: flow_panel_6
@@ -79,7 +103,7 @@ components:
     name: card_1
     properties:
       background: '#ffffff'
-      border: 2px solid
+      border: ''
       role: [card, auth-card]
       wrap_on: never
     type: ColumnPanel
