@@ -42,17 +42,9 @@ components:
           name: label_2
           properties: {align: left, font_size: 16, text: 'Password '}
           type: Label
-        - layout_properties: {width: 71.74998779296875}
-          name: spacer_1
-          properties: {height: 32}
-          type: Spacer
-        - layout_properties: {}
-          name: link_1
-          properties: {spacing_below: none, text: 'Fotgot your password?'}
-          type: Link
         layout_properties: {width: 297.5500122070313}
         name: flow_panel_7
-        properties: {align: center, spacing_below: none}
+        properties: {align: left, spacing_below: none}
         type: FlowPanel
       - components:
         - layout_properties: {width: 300}
@@ -73,7 +65,8 @@ components:
       properties: {align: center, vertical_align: top}
       type: FlowPanel
     - components:
-      - layout_properties: {}
+      - event_bindings: {click: button_1_click}
+        layout_properties: {}
         name: button_1
         properties:
           align: center
@@ -94,7 +87,8 @@ components:
       properties: {align: center}
       type: FlowPanel
     - components:
-      - layout_properties: {}
+      - event_bindings: {click: link_2_click}
+        layout_properties: {}
         name: link_2
         properties: {align: center, text: ''}
         type: Link
