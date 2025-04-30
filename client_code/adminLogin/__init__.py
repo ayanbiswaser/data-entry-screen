@@ -43,11 +43,10 @@ class adminLogin(adminLoginTemplate):
            ).show()
      except Exception as e:
         Notification(
-           e,
+           f"{e}",
            title="Failed",
            style="danger"
            ).show()
-        print(e)
 
   def link_2_click(self, **event_args):
    try:
