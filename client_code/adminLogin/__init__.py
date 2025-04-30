@@ -14,7 +14,7 @@ class adminLogin(adminLoginTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-
+    self.image_1.remove_from_parent()
     self.link_2.add_component(self.image_1)
 
 
