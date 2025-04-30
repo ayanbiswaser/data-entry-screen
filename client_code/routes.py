@@ -44,3 +44,4 @@ class ReportsRoute(Route):
     path = "/reports"
     form = "reports"
 
+routes=[HomeType,AdminLogin]

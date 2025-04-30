@@ -7,6 +7,6 @@ import anvil.users
 import anvil.server
 # In the startup Module
 from routing.router import launch
-from . import routes
+from .routes import routes
 
 launch()
