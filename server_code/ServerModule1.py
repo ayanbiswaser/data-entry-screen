@@ -31,3 +31,16 @@ def set_user_role(email, password):
     return {'success':False, "message": "A user with this email already exists."}
   except Exception as e:
     return {'success':False, 'message':e}
+
+
+@anvil.server.callable
+def admin_login(email, password):
+  try:
+    user=anvil.users.login_with_email(email, password)
+    return {'success':True}
+  except anvil.users.PasswordNotAcceptable:
+    return {'success':False, "message": "The password provided is not acceptable."}
+  except anvil.users.UserExists:
+    return {'success':False, "message": "A user with this email already exists."}
+  except Exception as e:
+    return {'success':False, 'message':e}

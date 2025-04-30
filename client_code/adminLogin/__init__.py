@@ -18,17 +18,17 @@ class adminLogin(adminLoginTemplate):
 
     self.image_1.remove_from_parent()
     self.link_2.add_component(self.image_1)
+    
 
 
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
-
-  def link_2_click(self, **event_args):
-   try:
-        user = anvil.users.signup_with_google()
+     email=self.email.text
+     password=self.password.text
+     print(email)
+     try:
+        user = anvil.users.login_with_email(email, password)
         if user:
           Notification(
            f"{user['email']} you are login",
@@ -38,10 +38,37 @@ class adminLogin(adminLoginTemplate):
         else:
           Notification(
            "Sign-up canceled.",
+           title="Failed",
+           style="danger"
+           ).show()
+     except Exception as e:
+        Notification(
+           e,
+           title="Failed",
+           style="danger"
+           ).show()
+        print(e)
+
+  def link_2_click(self, **event_args):
+   try:
+        user = anvil.users.login_with_google()
+        if user:
+          Notification(
+           f"{user['email']} you are login",
            title="Success",
+           style="success"
+           ).show()
+        else:
+          Notification(
+           "Sign-up canceled.",
+           title="Failed",
            style="danger"
            ).show()
    except Exception as e:
-        alert(f"An error occurred: {e}")
+        Notification(
+           e,
+           title="Failed",
+           style="danger"
+           ).show()
 
 

@@ -43,4 +43,3 @@ class createUser(createUserTemplate):
           title="Failed",
           style="danger"
          ).show()
-        print(e)
