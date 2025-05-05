@@ -28,7 +28,7 @@ class group(groupTemplate):
       {"project_name":"1", "allow_access":True,"no_access": False},
       {"project_name":"2", "allow_access":False,"no_access": True}
     ]
-    self.repeating_panel_2.items
+    self.repeating_panel_2.items=data
     load_cards(self)
 
 
