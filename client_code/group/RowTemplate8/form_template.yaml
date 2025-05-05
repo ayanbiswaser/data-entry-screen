@@ -1,0 +1,23 @@
+components:
+- components:
+  - name: radio_button_2
+    properties: {text: radio_button_2}
+    type: RadioButton
+  layout_properties: {column: OJLQEN}
+  name: flow_panel_1
+  properties: {}
+  type: FlowPanel
+- components:
+  - name: radio_button_1
+    properties: {text: radio_button_1}
+    type: RadioButton
+  layout_properties: {column: VJQQOR}
+  name: flow_panel_2
+  properties: {}
+  type: FlowPanel
+- layout_properties: {column: OJLQEN}
+  name: radio_button_3
+  properties: {text: radio_button_3}
+  type: RadioButton
+container: {type: DataRowPanel}
+is_package: true

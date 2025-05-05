@@ -1,4 +1,4 @@
-from ._anvil_designer import RowTemplate6Template
+from ._anvil_designer import RowTemplate8Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,13 +9,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class RowTemplate6(RowTemplate6Template):
+class RowTemplate8(RowTemplate8Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # self.label_project_name.text = self.item['project_name']
-    # Set the selected RadioButton based on 'allow_access' value
-    # if self.item['allow_access']:
-    #   self.radio_button_1.selected = True
-    # else:
-    #   self.radio_button_2.selected = True
+
+    # Any code you write here will run before the form opens.

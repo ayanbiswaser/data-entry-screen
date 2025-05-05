@@ -1,11 +1,9 @@
 components:
 - components:
-  - components:
-    - event_bindings: {click: edit_button_click}
-      layout_properties: {}
-      name: edit_button_copy
-      properties: {align: center, background: '', icon: 'fa:pencil', text: ''}
-      type: Button
+  - name: radio_button_1
+    properties: {text: radio_button_1}
+    type: RadioButton
+  - components: []
     layout_properties: {}
     name: flow_panel_3
     properties: {align: center}
