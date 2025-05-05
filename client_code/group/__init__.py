@@ -42,6 +42,7 @@ def load_cards(self):
     # Define the click event handler with a default argument to capture the current item
     def card_click(sender, item=item, **event_args):
       Notification(f"You clicked on: {item['title']}", timeout=3).show()
+      self.side_panel.visible=True
 
       # Set the click event handler for the Link
     card_link.set_event_handler("click", card_click)
