@@ -8,8 +8,9 @@ components:
             name: text_box_1
             properties: {placeholder: Search Group ..., role: x-textbox}
             type: TextBox
-          - name: button_1
-            properties: {icon: 'fa:plus', text: Add}
+          - layout_properties: {}
+            name: button_1
+            properties: {icon: 'fa:plus', role: filled, text: Add}
             type: Button
           layout_properties: {width: 290.9869755859375}
           name: flow_panel_6
@@ -20,15 +21,16 @@ components:
         properties: {}
         type: FlowPanel
       - components: []
-        layout_properties: {width: 299.98696337890624}
-        name: flow_panel_5
-        properties: {}
+        layout_properties: {width: 299.97498779296876}
+        name: cards_container
+        properties: {align: center}
         type: FlowPanel
       layout_properties: {width: 305.36301220703126}
       name: flow_panel_2
       properties: {}
       type: FlowPanel
-    - layout_properties: {width: 362.362951171875}
+    - components: []
+      layout_properties: {width: 362.362951171875}
       name: flow_panel_3
       properties: {}
       type: FlowPanel

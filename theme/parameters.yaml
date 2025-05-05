@@ -313,3 +313,5 @@ roles:
   name: auth-card
 - components: [Button]
   name: auth-button
+- components: [ColumnPanel]
+  name: group-card
