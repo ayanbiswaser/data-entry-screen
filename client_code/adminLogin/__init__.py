@@ -8,6 +8,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import Notification, Label
+from ..utill import Auth
+from routing.router import navigate
 
 
 
@@ -18,6 +20,10 @@ class adminLogin(adminLoginTemplate):
 
     self.image_1.remove_from_parent()
     self.link_2.add_component(self.image_1)
+
+    if Auth():
+      navigate(path='/group')
+      
     
 
 
