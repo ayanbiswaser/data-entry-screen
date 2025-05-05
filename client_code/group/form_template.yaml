@@ -36,7 +36,7 @@ components:
     - components:
       - components:
         - components:
-          - layout_properties: {}
+          - layout_properties: {width: 249.4}
             name: text_box_2
             properties: {placeholder: Add Email, role: x-textbox, text: ''}
             type: TextBox
@@ -63,7 +63,7 @@ components:
             - name: repeating_panel_1
               properties: {item_template: group.RowTemplate5}
               type: RepeatingPanel
-            layout_properties: {width: 348.3999267578125}
+            layout_properties: {expand: true, width: 348.3999267578125}
             name: data_grid_1
             properties:
               columns:
@@ -80,7 +80,7 @@ components:
             - name: repeating_panel_2
               properties: {item_template: group.RowTemplate6}
               type: RepeatingPanel
-            layout_properties: {width: 351.1999755859375}
+            layout_properties: {expand: true, width: 351.1999755859375}
             name: data_grid_2
             properties:
               columns:

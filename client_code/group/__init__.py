@@ -14,6 +14,21 @@ class group(groupTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.data_grid_1.columns = [
+      {"id": "modules", "title": "MODULES", "data_key": "modules"},
+      {"id": "allow_access", "title": "ALLOW ACCESS", "data_key": "allow_access"},
+      {"id": "no_access", "title": "NO ACCESS", "data_key": "no_access"},
+    ]
+    self.data_grid_2.columns = [
+      {"id": "project_name", "title": "PROJECT NAME", "data_key": "project_name"},
+      {"id": "allow_access", "title": "ALLOW ACCESS", "data_key": "allow_access"},
+      {"id": "no_access", "title": "NO ACCESS", "data_key": "no_access"},
+    ]
+    data = [
+      {"project_name":"1", "allow_access":True,"no_access": False},
+      {"project_name":"2", "allow_access":False,"no_access": True}
+    ]
+    self.repeating_panel_2.items=data
     load_cards(self)
 
 
