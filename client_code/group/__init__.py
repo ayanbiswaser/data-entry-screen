@@ -14,8 +14,10 @@ class group(groupTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    
 
     self.email_list=[]
+    
 
     self.drop_down_data=['email1@example.com', 'email2@example.com', 'email3@example.com']
     self.drop_down_1.items=self.drop_down_data
@@ -79,11 +81,13 @@ def show_user_list(self,email_list):
     card_panel.add_component(title_label, width='250px')
     card_panel.add_component(cross_button, width="20%")
 
-    def btn_click(sender, item=item, **event_args):
-      print('')
+    def btn_click(self):
+      
       
 
-    cross_button.set_event_handler("click", btn_click)
+    # cross_button.set_event_handler("click", btn_click)
+    cross_button.set_event_handler("click", btn_click(self))
+
 
     
     self.user_container.add_component(card_panel)
