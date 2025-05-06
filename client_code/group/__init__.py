@@ -22,6 +22,7 @@ class group(groupTemplate):
     self.drop_down_data=['email1@example.com', 'email2@example.com', 'email3@example.com']
     self.drop_down_1.items=self.drop_down_data
     
+    
     self.data_grid_1.columns = [
       {"id": "modules", "title": "MODULES", "data_key": "modules"},
       {"id": "allow_access", "title": "ALLOW ACCESS", "data_key": "allow_access"},
@@ -50,7 +51,7 @@ class group(groupTemplate):
     email=self.drop_down_1.selected_value
     if email is not None:
       self.email_list.append(email)
-      show_user_list(self,self.email_list)
+      show_user_list(self)
       self.drop_down_data.remove(email)
       self.drop_down_1.items=self.drop_down_data
 
@@ -61,10 +62,10 @@ class group(groupTemplate):
 
 
   
-def show_user_list(self,email_list):
+def show_user_list(self):
   self.user_container.clear()
   
-  for item in email_list:
+  for item in self.email_list:
     #group card
     card_panel = FlowPanel()
     card_panel.role = "group-email-card"
@@ -72,6 +73,7 @@ def show_user_list(self,email_list):
     # Create the cross icon button
     cross_button = Button(icon="fa:times")
     cross_button.role='filled'
+    cross_button.tag=item
     # Optional: apply a role for styling
 
     # Create components for the card
@@ -81,14 +83,14 @@ def show_user_list(self,email_list):
     card_panel.add_component(title_label, width='250px')
     card_panel.add_component(cross_button, width="20%")
 
-    def btn_click(self):
-      
-      
+    def btn_click(self, item, **event_args):
+      self.drop_down_data.append(item)
+      self.email_list.remove(item)
+      self.drop_down_1.items=self.drop_down_data
+      show_user_list(self)
 
     # cross_button.set_event_handler("click", btn_click)
-    cross_button.set_event_handler("click", btn_click(self))
-
-
+    cross_button.set_event_handler("click", lambda sender, **event_args: btn_click(self,sender.tag))
     
     self.user_container.add_component(card_panel)
 
