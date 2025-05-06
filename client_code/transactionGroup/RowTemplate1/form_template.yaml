@@ -3,15 +3,14 @@ components:
   - name: radio_button_1
     properties: {text: radio_button_1}
     type: RadioButton
-  - components: []
-    layout_properties: {}
-    name: flow_panel_3
-    properties: {align: center}
-    type: FlowPanel
   layout_properties: {column: cta}
   name: flow_panel_1
   properties: {align: center}
   type: FlowPanel
+- layout_properties: {column: VJQQOR}
+  name: radio_button_2
+  properties: {text: radio_button_2}
+  type: RadioButton
 container:
   properties:
     auto_display_data: true

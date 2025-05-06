@@ -60,43 +60,22 @@ components:
       - components:
         - components:
           - components:
-            - components:
-              - layout_properties: {pinned: false}
-                name: group_repeating_panel
-                properties: {item_template: transactionGroup.RowTemplate1}
-                type: RepeatingPanel
-              layout_properties: {expand: true, width: 732}
-              name: group_grid
-              properties:
-                columns:
-                - {data_key: column_1, expand: false, id: JKSDUP, title: Column 1, width: 109.39996337890625}
-                - {data_key: column_2, id: BDQAXI, title: Column 2}
-                - {data_key: column_3, id: ZFJZJE, title: Column 3}
-                - {data_key: column_4, id: EAABZB, title: Column 4}
-                rows_per_page: 50
-                show_page_controls: false
-                wrap_on: never
-              type: DataGrid
-            name: flow_panel_1_copy
-            properties: {align: center}
-            type: FlowPanel
-          layout_properties: {width: 357.20001220703125}
-          name: flow_panel_11
-          properties: {}
-          type: FlowPanel
-        - components:
-          - components:
             - name: repeating_panel_1
-              properties: {item_template: group.RowTemplate8}
+              properties: {item_template: group.RowTemplate5}
               type: RepeatingPanel
-            layout_properties: {width: 386.5999755859375}
+            layout_properties: {width: 356.5999755859375}
             name: data_grid_1
             properties:
               columns:
               - {data_key: column_1, id: JKSDUP, title: Column 1}
               - {data_key: column_2, id: VJQQOR, title: Column 2}
-              - {data_key: column_3, id: OJLQEN, title: Column 3}
+              - {data_key: cta, id: OJLQEN, title: Column 3}
             type: DataGrid
+          layout_properties: {width: 357.20001220703125}
+          name: flow_panel_11
+          properties: {}
+          type: FlowPanel
+        - components: []
           layout_properties: {width: 355.79998779296875}
           name: flow_panel_12
           properties: {}
@@ -109,7 +88,7 @@ components:
       name: side_panel
       properties: {visible: false}
       type: FlowPanel
-    layout_properties: {grid_position: 'GIXCID,GKOQOO'}
+    layout_properties: {grid_position: 'RCOJIR,RRNQIR'}
     name: flow_panel_1
     properties: {}
     type: FlowPanel
