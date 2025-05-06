@@ -17,32 +17,29 @@ class group(groupTemplate):
 
     self.email_list=[]
 
-    drop_down_data=[
-      ('val1','val1'),
-      ('val2','val2'),
-    ]
-    self.drop_down_1.items=drop_down_data
+    self.drop_down_data=['email1@example.com', 'email2@example.com', 'email3@example.com']
+    self.drop_down_1.items=self.drop_down_data
     
     self.data_grid_1.columns = [
       {"id": "modules", "title": "MODULES", "data_key": "modules"},
       {"id": "allow_access", "title": "ALLOW ACCESS", "data_key": "allow_access"},
       {"id": "no_access", "title": "NO ACCESS", "data_key": "no_access"},
     ]
-    self.data_grid_2.columns = [
-      {"id": "project_name", "title": "PROJECT NAME", "data_key": "project_name"},
-      {"id": "allow_access", "title": "ALLOW ACCESS", "data_key": "allow_access"},
-      {"id": "no_access", "title": "NO ACCESS", "data_key": "no_access"},
-    ]
+    # self.data_grid_2.columns = [
+    #   {"id": "project_name", "title": "PROJECT NAME", "data_key": "project_name"},
+    #   {"id": "allow_access", "title": "ALLOW ACCESS", "data_key": "allow_access"},
+    #   {"id": "no_access", "title": "NO ACCESS", "data_key": "no_access"},
+    # ]
     data_1 = [
       {"modules":"1", "allow_access":True,"no_access": False},
       {"modules":"2", "allow_access":False,"no_access": False}
     ]
-    data_2 = [
-      {"project_name":"10", "allow_access":True,"no_access": False},
-      {"project_name":"20", "allow_access":False,"no_access": False}
-    ]
+    # data_2 = [
+    #   {"project_name":"10", "allow_access":True,"no_access": False},
+    #   {"project_name":"20", "allow_access":False,"no_access": False}
+    # ]
     self.repeating_panel_1.items=data_1
-    self.repeating_panel_2.items=data_2
+    # self.repeating_panel_2.items=data_2
     
     load_cards(self)
 
@@ -52,6 +49,12 @@ class group(groupTemplate):
     if email is not None:
       self.email_list.append(email)
       show_user_list(self,self.email_list)
+      self.drop_down_data.remove(email)
+      self.drop_down_1.items=self.drop_down_data
+
+        
+
+      
     
 
 
@@ -75,6 +78,13 @@ def show_user_list(self,email_list):
     # Add components to the card panel
     card_panel.add_component(title_label, width='250px')
     card_panel.add_component(cross_button, width="20%")
+
+    def btn_click(sender, item=item, **event_args):
+      print('')
+      
+
+    cross_button.set_event_handler("click", btn_click)
+
     
     self.user_container.add_component(card_panel)
 

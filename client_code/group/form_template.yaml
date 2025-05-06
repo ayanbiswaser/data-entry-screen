@@ -34,14 +34,9 @@ components:
       properties: {}
       type: FlowPanel
     - components:
-      - components: []
-        layout_properties: {expand: true, width: 76.39996337890625}
-        name: user_container
-        properties: {}
-        type: FlowPanel
       - components:
         - components:
-          - layout_properties: {expand: true, width: 251.7999267578125}
+          - layout_properties: {expand: false, width: 251.7999267578125}
             name: drop_down_1
             properties: {border: 1px solid grey, include_placeholder: true, placeholder: Select user}
             type: DropDown
@@ -51,18 +46,24 @@ components:
           type: FlowPanel
         - components:
           - event_bindings: {click: button_2_click}
-            layout_properties: {expand: true}
+            layout_properties: {expand: false}
             name: button_2
-            properties: {role: filled, text: Add}
+            properties: {enabled: true, role: filled, text: Add}
             type: Button
           layout_properties: {width: 47.19999999999999}
           name: flow_panel_10
           properties: {}
           type: FlowPanel
+        layout_properties: {width: 369.4000244140625}
         name: flow_panel_5
         properties: {}
         type: FlowPanel
       - components:
+        - components: []
+          layout_properties: {width: 356.0460205078125}
+          name: user_container
+          properties: {}
+          type: FlowPanel
         - components:
           - components:
             - name: repeating_panel_1
@@ -80,19 +81,7 @@ components:
           name: flow_panel_11
           properties: {}
           type: FlowPanel
-        - components:
-          - components:
-            - name: repeating_panel_2
-              properties: {item_template: group.RowTemplate6}
-              type: RepeatingPanel
-            layout_properties: {expand: true}
-            name: data_grid_2
-            properties:
-              columns:
-              - {data_key: column_1, id: JKSDUP, title: Column 1}
-              - {data_key: column_2, id: VJQQOR, title: Column 2}
-              - {data_key: column_3, id: OJLQEN, title: Column 3}
-            type: DataGrid
+        - components: []
           layout_properties: {width: 355.79998779296875}
           name: flow_panel_12
           properties: {}
