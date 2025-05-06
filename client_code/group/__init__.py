@@ -14,24 +14,66 @@ class group(groupTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    self.email_list=[]
+
+    drop_down_data=[
+      ('val1','val1'),
+      ('val2','val2'),
+    ]
+    self.drop_down_1.items=drop_down_data
+    
     self.data_grid_1.columns = [
       {"id": "modules", "title": "MODULES", "data_key": "modules"},
       {"id": "allow_access", "title": "ALLOW ACCESS", "data_key": "allow_access"},
       {"id": "no_access", "title": "NO ACCESS", "data_key": "no_access"},
     ]
-    # self.data_grid_2.columns = [
-    #   {"id": "project_name", "title": "PROJECT NAME", "data_key": "project_name"},
-    #   {"id": "allow_access", "title": "ALLOW ACCESS", "data_key": "allow_access"},
-    #   {"id": "no_access", "title": "NO ACCESS", "data_key": "no_access"},
-    # ]
-    data = [
-      {"project_name":"1", "allow_access":True,"no_access": False},
-      {"project_name":"2", "allow_access":False,"no_access": True}
+    self.data_grid_2.columns = [
+      {"id": "project_name", "title": "PROJECT NAME", "data_key": "project_name"},
+      {"id": "allow_access", "title": "ALLOW ACCESS", "data_key": "allow_access"},
+      {"id": "no_access", "title": "NO ACCESS", "data_key": "no_access"},
     ]
-    self.repeating_panel_1.items=data
+    data_1 = [
+      {"modules":"1", "allow_access":True,"no_access": False},
+      {"modules":"2", "allow_access":False,"no_access": False}
+    ]
+    data_2 = [
+      {"project_name":"10", "allow_access":True,"no_access": False},
+      {"project_name":"20", "allow_access":False,"no_access": False}
+    ]
+    self.repeating_panel_1.items=data_1
+    self.repeating_panel_2.items=data_2
+    
     load_cards(self)
 
+  
+  def button_2_click(self, **event_args):
+    email=self.drop_down_1.selected_value
+    if email is not None:
+      self.email_list.append(email)
+      show_user_list(self,self.email_list)
+    
 
+
+  
+def show_user_list(self,email_list):
+  for item in email_list:
+    #group card
+    card_panel = FlowPanel()
+    card_panel.role = "group-card"
+    
+    # Create the cross icon button
+    cross_button = Button(icon="fa:times")
+    # Optional: apply a role for styling
+
+    # Create components for the card
+    title_label = Label(text=item, bold=True)
+    
+    # Add components to the card panel
+    card_panel.add_component(title_label)
+    card_panel.add_component(cross_button)
+    
+    self.user_container.add_component(card_panel)
 
     
 def load_cards(self):

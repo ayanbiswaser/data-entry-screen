@@ -34,18 +34,24 @@ components:
       properties: {}
       type: FlowPanel
     - components:
+      - components: []
+        layout_properties: {expand: true, width: 76.39996337890625}
+        name: user_container
+        properties: {}
+        type: FlowPanel
       - components:
         - components:
-          - layout_properties: {width: 249.4}
-            name: text_box_2
-            properties: {placeholder: Add Email, role: x-textbox, text: ''}
-            type: TextBox
+          - layout_properties: {expand: true, width: 251.7999267578125}
+            name: drop_down_1
+            properties: {border: 1px solid grey, include_placeholder: true, placeholder: Select user}
+            type: DropDown
           layout_properties: {width: 282.786951171875}
           name: flow_panel_9
           properties: {align: center}
           type: FlowPanel
         - components:
-          - layout_properties: {}
+          - event_bindings: {click: button_2_click}
+            layout_properties: {expand: true}
             name: button_2
             properties: {role: filled, text: Add}
             type: Button
@@ -53,7 +59,6 @@ components:
           name: flow_panel_10
           properties: {}
           type: FlowPanel
-        layout_properties: {expand: true, width: 353.9870244140625}
         name: flow_panel_5
         properties: {}
         type: FlowPanel

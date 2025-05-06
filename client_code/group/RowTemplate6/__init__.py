@@ -13,5 +13,12 @@ class RowTemplate6(RowTemplate6Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.radio_button_3.group_name=self.item['project_name']
+    self.radio_button_4.group_name=self.item['project_name']
+
+    if self.item['allow_access']:
+      self.radio_button_3.selected = True
+    else:
+      self.radio_button_4.selected = True
 
     # Any code you write here will run before the form opens.
