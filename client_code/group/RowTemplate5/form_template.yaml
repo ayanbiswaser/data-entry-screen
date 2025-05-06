@@ -1,0 +1,11 @@
+components:
+- layout_properties: {column: allow_access}
+  name: radio_button_1
+  properties: {text: ''}
+  type: RadioButton
+- layout_properties: {column: no_access}
+  name: radio_button_2
+  properties: {text: ''}
+  type: RadioButton
+container: {type: DataRowPanel}
+is_package: true

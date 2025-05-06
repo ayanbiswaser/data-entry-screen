@@ -58,12 +58,36 @@ components:
         properties: {}
         type: FlowPanel
       - components:
-        - components: []
+        - components:
+          - components:
+            - name: repeating_panel_1
+              properties: {item_template: group.RowTemplate5}
+              type: RepeatingPanel
+            layout_properties: {expand: true, width: 346.799951171875}
+            name: data_grid_1
+            properties:
+              columns:
+              - {data_key: column_1, id: JKSDUP, title: Column 1}
+              - {data_key: column_2, id: VJQQOR, title: Column 2}
+              - {data_key: column_3, id: OJLQEN, title: Column 3}
+            type: DataGrid
           layout_properties: {width: 357.20001220703125}
           name: flow_panel_11
           properties: {}
           type: FlowPanel
-        - components: []
+        - components:
+          - components:
+            - name: repeating_panel_2
+              properties: {item_template: group.RowTemplate6}
+              type: RepeatingPanel
+            layout_properties: {expand: true}
+            name: data_grid_2
+            properties:
+              columns:
+              - {data_key: column_1, id: JKSDUP, title: Column 1}
+              - {data_key: column_2, id: VJQQOR, title: Column 2}
+              - {data_key: column_3, id: OJLQEN, title: Column 3}
+            type: DataGrid
           layout_properties: {width: 355.79998779296875}
           name: flow_panel_12
           properties: {}
