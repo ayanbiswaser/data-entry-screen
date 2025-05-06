@@ -58,19 +58,7 @@ components:
         properties: {}
         type: FlowPanel
       - components:
-        - components:
-          - components:
-            - name: repeating_panel_1
-              properties: {item_template: group.RowTemplate5}
-              type: RepeatingPanel
-            layout_properties: {width: 356.5999755859375}
-            name: data_grid_1
-            properties:
-              columns:
-              - {data_key: column_1, id: JKSDUP, title: Column 1}
-              - {data_key: column_2, id: VJQQOR, title: Column 2}
-              - {data_key: cta, id: OJLQEN, title: Column 3}
-            type: DataGrid
+        - components: []
           layout_properties: {width: 357.20001220703125}
           name: flow_panel_11
           properties: {}

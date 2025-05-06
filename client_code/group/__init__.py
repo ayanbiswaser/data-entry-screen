@@ -24,11 +24,11 @@ class group(groupTemplate):
     #   {"id": "allow_access", "title": "ALLOW ACCESS", "data_key": "allow_access"},
     #   {"id": "no_access", "title": "NO ACCESS", "data_key": "no_access"},
     # ]
-    # data = [
-    #   {"project_name":"1", "allow_access":True,"no_access": False},
-    #   {"project_name":"2", "allow_access":False,"no_access": True}
-    # ]
-    # self.repeating_panel_2.items=data
+    data = [
+      {"project_name":"1", "allow_access":True,"no_access": False},
+      {"project_name":"2", "allow_access":False,"no_access": True}
+    ]
+    self.repeating_panel_1.items=data
     load_cards(self)
 
 
