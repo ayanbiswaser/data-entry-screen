@@ -64,6 +64,7 @@ def show_user_list(self,email_list):
     
     # Create the cross icon button
     cross_button = Button(icon="fa:times")
+    cross_button.role=''
     # Optional: apply a role for styling
 
     # Create components for the card
