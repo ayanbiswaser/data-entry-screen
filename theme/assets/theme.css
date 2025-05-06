@@ -782,3 +782,14 @@ input[disabled] ~ span {
   border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+.anvil-role-group-email-card{
+  min-width: 150px;
+  padding: 0 10px;
+  border: 1px solid rgb(228, 228, 231);
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flat;
+  justify-content: space-between;
+  align-items: space-between;
+}

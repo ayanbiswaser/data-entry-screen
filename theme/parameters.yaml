@@ -315,3 +315,5 @@ roles:
   name: auth-button
 - components: [ColumnPanel]
   name: group-card
+- components: [ColumnPanel]
+  name: group-email-card

@@ -57,22 +57,24 @@ class group(groupTemplate):
 
   
 def show_user_list(self,email_list):
+  self.user_container.clear()
+  
   for item in email_list:
     #group card
     card_panel = FlowPanel()
-    card_panel.role = "group-card"
+    card_panel.role = "group-email-card"
     
     # Create the cross icon button
     cross_button = Button(icon="fa:times")
-    cross_button.role=''
+    cross_button.role='filled'
     # Optional: apply a role for styling
 
     # Create components for the card
     title_label = Label(text=item, bold=True)
     
     # Add components to the card panel
-    card_panel.add_component(title_label)
-    card_panel.add_component(cross_button)
+    card_panel.add_component(title_label, width='250px')
+    card_panel.add_component(cross_button, width="20%")
     
     self.user_container.add_component(card_panel)
 
