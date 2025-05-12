@@ -48,28 +48,5 @@ def admin_login(email, password):
     return {'success':False, 'message':e}
 
 
-@anvil.server.callable
-def call_airflow():
-  dag_id='simple_5min_python_operator_dag'
-  airflow_host = "https://fast-pants-smell.loca.lt"  # Replace with your Airflow host if different
-  username = "admin"
-  password = "yRAVywkQ39zan4bM"
-  endpoint = f"{airflow_host}/api/v1/dags/{dag_id}/dagRuns"
-  headers = {
-    'Content-Type': 'application/json'
-  }
-  data = {}
-  try:
-    response = requests.post(
-      endpoint,
-      auth=HTTPBasicAuth(username, password),
-      headers=headers,
-      json=data
-    )
-    response.raise_for_status()  # Raise an exception for HTTP errors
-    print(response.json())
-    # return response.json()
-  except requests.exceptions.RequestException as e:
-    print({'error from air':str(e)})
-    # return {"error": str(e)}
+
   
