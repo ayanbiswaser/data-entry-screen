@@ -58,7 +58,7 @@ class auth(authTemplate):
     self.find_user()
 
   def nav_link_1_click(self, **event_args):
-    navigate('/create-user')
+    test=anvil.server.call('call_airflow')
 
     
     
