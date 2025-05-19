@@ -55,7 +55,7 @@ components:
       - event_bindings: {click: search_click}
         layout_properties: {}
         name: search
-        properties: {icon: 'fa:search', role: x-button, text: 'SEARCH '}
+        properties: {icon: 'fa:search', role: null, text: 'SEARCH '}
         type: Button
       name: flow_panel_4
       properties: {}
@@ -63,7 +63,7 @@ components:
     - components:
       - layout_properties: {}
         name: button_2
-        properties: {icon: 'fa:filter', role: x-button, text: ''}
+        properties: {icon: 'fa:filter', icon_align: top, role: null, text: ''}
         type: Button
       name: flow_panel_5
       properties: {}
