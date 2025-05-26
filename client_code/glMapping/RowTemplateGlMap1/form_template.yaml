@@ -15,7 +15,7 @@ components:
 - components:
   - components:
     - name: repeating_panel_1
-      properties: {item_template: glMapping.RowTemplate4.RowTemplate2}
+      properties: {item_template: glMapping.RowTemplateGlMap1.RowTemplateGlMap2}
       type: RepeatingPanel
     layout_properties: {expand: true, width: 666.3999877929688}
     name: data_grid_1

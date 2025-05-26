@@ -80,7 +80,7 @@ components:
     - components:
       - layout_properties: {pinned: false}
         name: gl_mapping_repeating_panel
-        properties: {item_template: glMapping.RowTemplate4}
+        properties: {item_template: glMapping.RowTemplateGlMap1}
         type: RepeatingPanel
       layout_properties: {expand: true, width: 732}
       name: group_grid

@@ -1,4 +1,4 @@
-from ._anvil_designer import RowTemplate4Template
+from ._anvil_designer import RowTemplateGlMap1Template
 from anvil import *
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
@@ -12,7 +12,7 @@ from anvil import Notification, Label
 
 
 
-class RowTemplate4(RowTemplate4Template):
+class RowTemplateGlMap1(RowTemplateGlMap1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
