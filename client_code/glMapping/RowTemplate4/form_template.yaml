@@ -1,24 +1,13 @@
 components:
 - components:
-  - components:
-    - event_bindings: {click: edit_button_click}
-      name: edit_button
-      properties: {align: center, background: '', icon: 'fa:pencil', text: ''}
-      type: Button
-    layout_properties: {}
-    name: flow_panel_2
-    properties: {align: center}
-    type: FlowPanel
-  - components:
-    - event_bindings: {click: delete_button_click}
-      layout_properties: {}
-      name: delete_button
-      properties: {align: center, background: '#f51000', icon: 'fa:trash', text: ''}
-      type: Button
-    layout_properties: {}
-    name: flow_panel_3
-    properties: {align: center}
-    type: FlowPanel
+  - event_bindings: {click: edit_button_click}
+    name: edit_button
+    properties: {align: center, background: '', icon: 'fa:pencil', text: ''}
+    type: Button
+  - event_bindings: {click: delete_button_click}
+    name: delete_button
+    properties: {align: center, background: '#f51000', icon: 'fa:trash', text: ''}
+    type: Button
   layout_properties: {column: cta}
   name: flow_panel_1
   properties: {align: center}
